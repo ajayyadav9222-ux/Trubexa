@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trubexa BPO Solutions</title>
+  <meta name="description" content="Trubexa - AI-powered BPO solutions for customer support, automation, and business growth.">
+  <meta property="og:title" content="Trubexa BPO Solutions">
+  <meta property="og:description" content="AI-Powered BPO for the Digital Age. Revolutionizing outsourcing with automation and customer-centric solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Trubexa BPO Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <style>
+       * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body { background: #0a0a23; color: #e0e0f0; overflow-x: hidden; }
+    
+    :root{
+      --bg:#0a0a23;
+      --ink:#e0e0f0;
+      --muted:#c2c9ff;
+      --accent:#00e0ff;
+      --accent-2:#00ffff;
+      --card:#121232;
+      --line:#1a1a3d;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Orbitron',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Brighter glowing Trubexa text */
+    .logo-link h1.glow-text {
+      font-size: 26px;
+      color: #33aaff; /* brighter version of #0073c2 */
+      text-transform: uppercase;
+      animation: glowText 1.5s infinite alternate;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* Stronger glow for logo */
+    .glow-logo {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 8px #33aaff) drop-shadow(0 0 16px #33aaff) drop-shadow(0 0 24px #33aaff);
+      transition: 0.3s ease-in-out;
+    }
+
+    .glow-logo:hover {
+      filter: drop-shadow(0 0 12px #33aaff) drop-shadow(0 0 24px #33aaff) drop-shadow(0 0 36px #33aaff);
+    }
+    
+    
+
+    /* Stronger keyframes for glowing text */
+    @keyframes glowText {
+      from { text-shadow: 0 0 8px #33aaff, 0 0 15px #33aaff; }
+      to { text-shadow: 0 0 20px #33aaff, 0 0 40px #33aaff, 0 0 60px #33aaff; }
+    }
+
+    nav { display: flex; }
+    nav a {
+      color: #ccefff; margin-left: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;
+    }
+    nav a:hover { color: #00ffff; text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff; }
+    
+    .menu-toggle { display: none; font-size: 26px; color: #00e0ff; cursor: pointer; }
+    /* HERO: uses a photo you liked + bulletproof fallback */
+    .hero{
+      position:relative;min-height:40vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(1200px 400px at 50% 0%, #001537 0%, #000a1a 60%, #000610 100%);
+      z-index:0
+    }
+    .hero img.hero-bg{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(1.1)
+    }
+    .hero-content{position:relative;z-index:1;padding:40px 20px;color:#e9fbff;text-shadow:2px 2px 6px rgba(0,0,0,.6)}
+    .hero h2{font-size:32px;margin-bottom:10px;color:#00d9ff;animation:slideUp 1.2s ease forwards;opacity:0}
+    .hero p{font-size:16px;max-width:760px;margin:0 auto;color:#e0f7ff}
+
+    /* Section + cards */
+    .section{padding:50px;border-bottom:1px solid var(--line);opacity:0;transform:translateY(30px);transition:all 1s ease}
+    .section.visible{opacity:1;transform:translateY(0)}
+    .section h3{font-size:26px;margin-bottom:18px;color:#89f0ff}
+
+    .service{display:grid;grid-template-columns:minmax(280px,380px) 1fr;gap:30px;align-items:center}
+    .illus, .photo{
+      background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.35);overflow:hidden
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .service-content p{line-height:1.65;font-size:15px;color:var(--muted);margin-bottom:12px}
+    .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+    .badge{border:1px solid var(--accent);color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.02em}
+
+    .detail-block{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+    .detail-card{background:#0f0f2a;border:1px solid var(--line);border-radius:12px;padding:12px}
+    .detail-card strong{display:block;margin-bottom:6px;color:#a6f3ff;font-size:13px}
+    .detail-card ul{padding-left:18px}
+    .detail-card li{font-size:13px;color:#c9d0ff;margin:4px 0}
+
+    /* FAQ / Engagement */
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    details{background:#0f0f2a;border:1px solid var(--line);border-radius:12px;padding:12px}
+    summary{cursor:pointer;color:#a6f3ff;font-weight:600;outline:none}
+    details p{margin-top:8px;color:#c9d0ff;font-size:14px;line-height:1.6}
+
+    footer{text-align:center;padding:24px;background:#1c1c1c;color:#cccccc;font-size:14px}
+
+    @keyframes glow{from{ text-shadow:0 0 5px var(--accent)} to{ text-shadow:0 0 20px var(--accent-2),0 0 30px var(--accent)}}
+    @keyframes slideUp{from{transform:translateY(30px);opacity:0} to{transform:translateY(0);opacity:1}}
+
+    /* Responsive */
+    @media (max-width:900px){ .service{grid-template-columns:1fr} }
+    @media (max-width:768px){
+      nav{display:none;flex-direction:column;background:#000428;position:absolute;top:70px;right:0;width:220px;padding:18px}
+      nav.active{display:flex}
+      .menu-toggle{display:block}
+    }
+  </style>
+</head>
+<body>
+<header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.jpg" alt="Trubexa Logo" class="logo glow-logo">
+        <h1 class="glow-text">Trubexa</h1>
+      </a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav><br>
+      <a href="index.html">Home</a><br>
+      <a href="services.html">Services</a><br>
+      <a href="industries.html">Industries</a><br>
+      <a href="vision.html">Vision</a><br>
+      <a href="contact.html">Contact</a><br>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+<!-- HERO: keeps the “awesome” look you liked, with a safe fallback -->
+<section class="hero">
+  <img class="hero-bg"
+       src="./img/blue.jpg"
+       alt="Customer support collage"
+       onerror="this.remove();">
+  <div class="hero-content">
+    <h2>Our Services</h2>
+    <p>Customer-first BPO powered by disciplined processes, transparent dashboards, and outcome-based execution.</p>
+  </div>
+</section>
+
+<!-- 1) CUSTOMER SUPPORT (kept your favorite real image, with fallback) -->
+<section class="section visible">
+  <h3>Customer Support</h3>
+  <div class="service">
+    <figure class="photo" aria-label="Customer Support photo">
+      <img src="./img/wfh.jpg"
+           alt="Friendly call center agent"
+           onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22270%22><rect width=%22100%%22 height=%22100%%22 fill=%22%2300142a%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%2300e0ff%22 font-size=%2216%22 font-family=%22Arial%22>Customer Support</text></svg>';"/>
+    </figure>
+    <div class="service-content">
+      <p>24/7 multilingual support across voice, email, and chat with strict SLAs for First Response, Resolution Time, QA, and CSAT.</p>
+      <div class="badge-row">
+        <span class="badge">24/7/365</span><span class="badge">Voice • Email • Chat</span><span class="badge">Multilingual</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>Tiered support (L1/L2) & smart routing</li>
+            <li>Knowledge base creation & upkeep</li>
+            <li>WFM & capacity planning</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>FinTech, E‑commerce, SaaS, Logistics</li>
+            <li>Global consumer apps</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>AHT, FCR, CSAT, NPS</li>
+            <li>Backlog & Reopen rate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2) RPA (inline SVG = never breaks) -->
+<section class="section">
+  <h3>Robotic Process Automation (RPA)</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of automation">
+      <!-- Simple gears & flow -->
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#012f6b"/><stop offset="1" stop-color="#0a0a23"/>
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g1)"/>
+        <!-- Flow boxes -->
+        <rect x="30" y="40" width="110" height="60" rx="10" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="160" y="40" width="110" height="60" rx="10" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="290" y="40" width="100" height="60" rx="10" fill="#0e2b66" stroke="#19ccff"/>
+        <!-- Arrows -->
+        <path d="M140 70h18" stroke="#19ccff" stroke-width="3"/>
+        <path d="M158 70l-6 6m6-6l-6-6" stroke="#19ccff" stroke-width="3" fill="none"/>
+        <path d="M270 70h18" stroke="#19ccff" stroke-width="3"/>
+        <path d="M288 70l-6 6m6-6l-6-6" stroke="#19ccff" stroke-width="3" fill="none"/>
+        <!-- Gears -->
+        <g transform="translate(120,160)">
+          <circle r="30" fill="#0b2b5b" stroke="#19ccff"/>
+          <g fill="none" stroke="#19ccff"><circle r="16"/><path d="M0-30V-16M0 16V30M-30 0h14M16 0h14M-22-22l10 10M22 22l-10-10M-22 22l10-10M22-22l-10 10"/></g>
+        </g>
+        <g transform="translate(240,180)">
+          <circle r="20" fill="#0b2b5b" stroke="#19ccff"/>
+          <g fill="none" stroke="#19ccff"><circle r="10"/><path d="M0-20V-10M0 10V20M-20 0h10M10 0h10"/></g>
+        </g>
+        <text x="210" y="250" fill="#9feaff" font-family="Arial" font-size="14" text-anchor="middle">Automate high-volume, rule-based work</text>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Automate rules-based, high-volume tasks to cut handling time, reduce errors, and free your teams for higher‑value work.</p>
+      <div class="badge-row">
+        <span class="badge">Data Ops</span><span class="badge">Claims</span><span class="badge">Reconciliations</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>Process discovery & SOP design</li>
+            <li>Bots for data extraction & entry</li>
+            <li>Exception handling & audit logs</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>BFSI, Insurance, EdTech ops</li>
+            <li>Vendor onboarding & KYC</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>TAT, Error rate, Cost/Tx</li>
+            <li>Throughput per FTE</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3) CRM & LEAD MANAGEMENT (inline SVG) -->
+<section class="section">
+  <h3>CRM & Lead Management</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of CRM connections">
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#002b54"/><stop offset="1" stop-color="#0a0a23"/></linearGradient></defs>
+        <rect width="100%" height="100%" fill="url(#g2)"/>
+        <!-- Central node -->
+        <circle cx="210" cy="120" r="28" fill="#0e2b66" stroke="#19ccff" stroke-width="2"/>
+        <text x="210" y="125" fill="#9feaff" font-family="Arial" font-size="12" text-anchor="middle">CRM</text>
+        <!-- Outer nodes -->
+        <g fill="#0e2b66" stroke="#19ccff">
+          <circle cx="90" cy="60" r="18"/><circle cx="330" cy="60" r="18"/>
+          <circle cx="80" cy="180" r="18"/><circle cx="340" cy="180" r="18"/>
+          <circle cx="210" cy="220" r="18"/>
+        </g>
+        <!-- Links -->
+        <g stroke="#19ccff" stroke-dasharray="4 3">
+          <line x1="210" y1="120" x2="90" y2="60"/>
+          <line x1="210" y1="120" x2="330" y2="60"/>
+          <line x1="210" y1="120" x2="80" y2="180"/>
+          <line x1="210" y1="120" x2="340" y2="180"/>
+          <line x1="210" y1="120" x2="210" y2="220"/>
+        </g>
+        <text x="210" y="255" fill="#9feaff" font-family="Arial" font-size="14" text-anchor="middle">Pipeline, segmentation, follow‑ups</text>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Pipeline setup, lead scoring, and campaign follow‑ups integrated with your CRM to lift conversion and retention.</p>
+      <div class="badge-row">
+        <span class="badge">Lead Scoring</span><span class="badge">Nurture</span><span class="badge">Retention</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>CRM hygiene & data enrichment</li>
+            <li>Outbound cadence & callbacks</li>
+            <li>Deal desk & renewal ops</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>SaaS trials & freemium</li>
+            <li>Credit cards & insurance</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>SQL rate, Win rate</li>
+            <li>LTV, Churn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4) BACK OFFICE & KPO (inline SVG) -->
+<section class="section">
+  <h3>Back Office & KPO</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of documents & database">
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#012a56"/><stop offset="1" stop-color="#0a0a23"/></linearGradient></defs>
+        <rect width="100%" height="100%" fill="url(#g3)"/>
+        <!-- Files -->
+        <rect x="60" y="60" width="120" height="90" rx="8" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="90" y="80" width="120" height="90" rx="8" fill="#0e2b66" stroke="#19ccff"/>
+        <!-- DB cylinder -->
+        <ellipse cx="320" cy="90" rx="55" ry="18" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="265" y="90" width="110" height="80" fill="#0e2b66" stroke="#19ccff"/>
+        <ellipse cx="320" cy="170" rx="55" ry="18" fill="#0e2b66" stroke="#19ccff"/>
+        <text x="210" y="245" fill="#9feaff" font-family="Arial" font-size="14" text-anchor="middle">Accuracy, compliance & auditability</text>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Claims, reconciliations, data processing, and research performed to your SOPs with audit trails and compliance controls.</p>
+      <div class="badge-row">
+        <span class="badge">Claims</span><span class="badge">Recons</span><span class="badge">Data QC</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>Document verification & indexing</li>
+            <li>Reconciliation & exception queues</li>
+            <li>KPO research & reporting</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>BFSI, Insurance, Logistics</li>
+            <li>Real Estate ops</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>TAT, Accuracy %, SLA hit rate</li>
+            <li>Cost per transaction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5) CLOUD DASHBOARDS (inline SVG) -->
+<section class="section">
+  <h3>Cloud Dashboards</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of cloud analytics">
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#003c7a"/><stop offset="1" stop-color="#0a0a23"/></linearGradient></defs>
+        <rect width="100%" height="100%" fill="url(#g4)"/>
+        <!-- Cloud -->
+        <g fill="#0e2b66" stroke="#19ccff" stroke-width="2" transform="translate(90,40)">
+          <ellipse cx="120" cy="60" rx="60" ry="30"/>
+          <ellipse cx="80" cy="70" rx="40" ry="25"/>
+          <ellipse cx="160" cy="70" rx="40" ry="25"/>
+          <rect x="60" y="70" width="120" height="34" fill="#0e2b66" stroke="#19ccff"/>
+        </g>
+        <!-- Chart -->
+        <rect x="70" y="140" width="280" height="80" rx="10" fill="#0e2b66" stroke="#19ccff"/>
+        <polyline points="90,200 140,175 190,185 240,160 290,170 330,150"
+                  fill="none" stroke="#19ccff" stroke-width="3"/>
+        <circle cx="140" cy="175" r="4" fill="#19ccff"/>
+        <circle cx="240" cy="160" r="4" fill="#19ccff"/>
+        <circle cx="330" cy="150" r="4" fill="#19ccff"/>
+        <text x="210" y="245" fill="#9feaff" font-family="Arial" font-size="14" text-anchor="middle">Live KPIs: AHT, FCR, QA, productivity</text>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Real‑time KPI visibility—AHT, FCR, QA, productivity, utilization—with drill‑downs by queue, channel, shift, and agent.</p>
+      <div class="badge-row">
+        <span class="badge">Real‑time</span><span class="badge">Role‑based access</span><span class="badge">CSV/BI export</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>Unified data pipeline & ETL</li>
+            <li>QA & compliance scorecards</li>
+            <li>Executive & floor dashboards</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>Ops leaders & founders</li>
+            <li>CS, Sales, Back‑office</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>Visibility, SLA adherence</li>
+            <li>Coachability & throughput</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6) SALES & TELEMARKETING (inline SVG) -->
+<section class="section">
+  <h3>Sales & Telemarketing</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of phone and chart">
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#003968"/><stop offset="1" stop-color="#0a0a23"/></linearGradient></defs>
+        <rect width="100%" height="100%" fill="url(#g6)"/>
+        <!-- Bars -->
+        <rect x="70" y="150" width="30" height="60" fill="#19ccff"/><rect x="110" y="130" width="30" height="80" fill="#19ccff"/><rect x="150" y="110" width="30" height="100" fill="#19ccff"/>
+        <!-- Phone -->
+        <rect x="260" y="70" width="90" height="140" rx="14" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="270" y="85" width="70" height="95" rx="8" fill="#091c44" stroke="#19ccff"/>
+        <circle cx="305" cy="190" r="6" fill="#19ccff"/>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Outbound campaigns for lead gen, qualification, upsell, and renewals—compliant, script‑driven, performance‑tracked.</p>
+      <div class="badge-row">
+        <span class="badge">B2C/B2B</span><span class="badge">Upsell</span><span class="badge">Renewals</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>Campaign design & target lists</li>
+            <li>QA scorecards & coaching</li>
+            <li>Disposition & callback loops</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>FinServ & Insurance cross‑sell</li>
+            <li>SaaS expansions</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>Contact rate, Conv%</li>
+            <li>ARPA, Renewal rate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7) QA & TRAINING (inline SVG) -->
+<section class="section">
+  <h3>Quality Assurance & Training</h3>
+  <div class="service">
+    <figure class="illus" role="img" aria-label="Illustration of clipboard check">
+      <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g7" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#003257"/><stop offset="1" stop-color="#0a0a23"/></linearGradient></defs>
+        <rect width="100%" height="100%" fill="url(#g7)"/>
+        <!-- Clipboard -->
+        <rect x="150" y="60" width="120" height="150" rx="10" fill="#0e2b66" stroke="#19ccff"/>
+        <rect x="175" y="45" width="70" height="25" rx="8" fill="#0e2b66" stroke="#19ccff"/>
+        <!-- Check items -->
+        <g stroke="#19ccff">
+          <path d="M170 100 h60" />
+          <path d="M170 125 h60" />
+          <path d="M170 150 h60" />
+        </g>
+        <polyline points="195,155 205,165 225,145" fill="none" stroke="#19ccff" stroke-width="3"/>
+      </svg>
+    </figure>
+    <div class="service-content">
+      <p>Call monitoring, calibrations, and coaching to raise CSAT and reduce repeat contacts—closing the loop with training.</p>
+      <div class="badge-row">
+        <span class="badge">Scorecards</span><span class="badge">Coaching</span><span class="badge">Compliance</span>
+      </div>
+      <div class="detail-block">
+        <div class="detail-card">
+          <strong>What we deliver</strong>
+          <ul>
+            <li>QA forms & audits</li>
+            <li>Calibration workshops</li>
+            <li>Agent academies & L&D</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>Ideal for</strong>
+          <ul>
+            <li>Scale‑ups hiring rapidly</li>
+            <li>Regulated industries</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <strong>KPIs we move</strong>
+          <ul>
+            <li>QA %, Reopen rate</li>
+            <li>CSAT/NPS lift</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Trubexa BPO Solutions. Powered by Innovation. All rights reserved.</p>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const sections = document.querySelectorAll('.section');
+  const revealOnScroll = () => {
+    sections.forEach(sec => {
+      const r = sec.getBoundingClientRect();
+      if (r.top < window.innerHeight - 100) sec.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+  menuToggle?.addEventListener('click', () => nav.classList.toggle('active'));
+</script>
+</body>
+</html>
