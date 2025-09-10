@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trubexa BPO Solutions</title>
+  <meta name="description" content="Trubexa - AI-powered BPO solutions for customer support, automation, and business growth.">
+  <meta property="og:title" content="Trubexa BPO Solutions">
+  <meta property="og:description" content="AI-Powered BPO for the Digital Age. Revolutionizing outsourcing with automation and customer-centric solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trubexa Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body { background: #0a0a23; color: #e0e0f0; overflow-x: hidden; }
+    
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Brighter glowing Trubexa text */
+    .logo-link h1.glow-text {
+      font-size: 26px;
+      color: #33aaff; /* brighter version of #0073c2 */
+      text-transform: uppercase;
+      animation: glowText 1.5s infinite alternate;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* Stronger glow for logo */
+    .glow-logo {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 8px #33aaff) drop-shadow(0 0 16px #33aaff) drop-shadow(0 0 24px #33aaff);
+      transition: 0.3s ease-in-out;
+    }
+
+    .glow-logo:hover {
+      filter: drop-shadow(0 0 12px #33aaff) drop-shadow(0 0 24px #33aaff) drop-shadow(0 0 36px #33aaff);
+    }
+
+    /* Stronger keyframes for glowing text */
+    @keyframes glowText {
+      from { text-shadow: 0 0 8px #33aaff, 0 0 15px #33aaff; }
+      to { text-shadow: 0 0 20px #33aaff, 0 0 40px #33aaff, 0 0 60px #33aaff; }
+    }
+
+    nav { display: flex; }
+    nav a {
+      color: #ccefff; margin-left: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;
+    }
+    nav a:hover { color: #00ffff; text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff; }
+    
+    .menu-toggle { display: none; font-size: 26px; color: #00e0ff; cursor: pointer; }
+    
+
+    @media (max-width: 768px) {
+      nav { 
+        display: none; 
+        flex-direction: column; 
+        background: #000428; 
+        position: absolute; 
+        top: 70px; right: 0; 
+        width: 200px; 
+        padding: 20px; 
+      }
+      nav.active { display: flex; }
+      nav a { margin: 15px 0; }
+      .menu-toggle { display: block; }
+    }
+
+    .hero { height: 45vh; background: url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a3?auto=format&fit=crop&w=1600&q=100') center/cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); }
+    .hero div { animation: slideUp 1.2s ease forwards; opacity: 0; }
+    .hero h2 { font-size: 38px; margin-bottom: 10px; color: #00d9ff; }
+    .hero p { font-size: 16px; max-width: 700px; color: #e0f7ff; }
+
+    .section { padding: 50px; border-bottom: 1px solid var(--line); opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section h3 { font-size: 28px; margin-bottom: 20px; color: #89f0ff; }
+    .section p, .section ul { max-width: 1000px; line-height: 1.7; font-size: 15px; color: var(--muted); }
+
+    .image-banner { width: 100%; height: 220px; background: url('./img/meeting.jpg') no-repeat center/cover; margin: 30px 0; animation: fadeIn 2s ease; }
+
+    footer { text-align: center; padding: 20px; background: #1c1c1c; color: #cccccc; font-size: 14px; margin-top: 40px; }
+
+    @keyframes glow { from { text-shadow: 0 0 5px var(--accent); } to { text-shadow: 0 0 20px var(--accent2), 0 0 30px var(--accent); } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <!-- ✅ Final Saved Header -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.jpg" alt="Trubexa Logo" class="logo glow-logo">
+        <h1 class="glow-text">Trubexa</h1>
+      </a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="vision.html">Vision</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Shaping the Future of Outsourcing</h2>
+      <p>Trubexa’s vision is to merge innovation, automation, and human expertise to create global impact.</p>
+    </div>
+  </section>
+
+  <div class="image-banner"></div>
+
+  <section class="section">
+    <h3>Our Mission</h3>
+    <p>
+      We strive to empower businesses worldwide by providing transformative outsourcing solutions. 
+      Our mission is to combine technology and people to deliver seamless customer experiences, 
+      optimize operations, and unlock growth potential for companies of all sizes.
+    </p>
+  </section>
+
+  <section class="section">
+    <h3>Our Core Values</h3>
+    <ul>
+      <li>🌐 Innovation – We constantly push boundaries with AI, automation, and futuristic tools.</li>
+      <li>💡 Customer Obsession – Every process is designed with the client’s success at the center.</li>
+      <li>⚡ Agility – Rapid adaptability to changing market trends and client demands.</li>
+      <li>🤝 Integrity – Transparency and trust are the foundation of every partnership.</li>
+      <li>🚀 Excellence – We deliver more than promised, always raising industry standards.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>Future Roadmap</h3>
+    <p>
+      Trubexa aims to build global delivery centers, introduce AI-powered platforms for multilingual 
+      customer support, and establish innovation labs for advanced automation. By 2030, 
+      we envision Trubexa as a worldwide outsourcing leader trusted by Fortune 500 companies and startups alike.
+    </p>
+  </section>
+
+  <div class="image-banner" style="background:url('./img/hand.jpg') no-repeat center/cover;"></div>
+
+  <section class="section">
+    <h3>Why Our Vision Matters</h3>
+    <p>
+      In an era of rapid digital transformation, businesses need partners who understand both technology 
+      and human connection. Trubexa bridges this gap, ensuring that outsourcing is not just cost-effective 
+      but also a driver of innovation and long-term growth.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Trubexa BPO Solutions. Powered by Innovation. All rights reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const revealOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // 🔹 Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
