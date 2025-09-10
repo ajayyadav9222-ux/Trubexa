@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trubexa BPO Solutions</title>
+  <meta name="description" content="Trubexa - AI-powered BPO solutions for customer support, automation, and business growth.">
+  <meta property="og:title" content="Trubexa BPO Solutions">
+  <meta property="og:description" content="AI-Powered BPO for the Digital Age. Revolutionizing outsourcing with automation and customer-centric solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body { background: #0a0a23; color: #e0e0f0; overflow-x: hidden; }
+    
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Brighter glowing Trubexa text */
+    .logo-link h1.glow-text {
+      font-size: 26px;
+      color: #33aaff; /* brighter version of #0073c2 */
+      text-transform: uppercase;
+      animation: glowText 1.5s infinite alternate;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* Stronger glow for logo */
+    .glow-logo {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 8px #33aaff) drop-shadow(0 0 16px #33aaff) drop-shadow(0 0 24px #33aaff);
+      transition: 0.3s ease-in-out;
+    }
+
+    .glow-logo:hover {
+      filter: drop-shadow(0 0 12px #33aaff) drop-shadow(0 0 24px #33aaff) drop-shadow(0 0 36px #33aaff);
+    }
+
+    /* Stronger keyframes for glowing text */
+    @keyframes glowText {
+      from { text-shadow: 0 0 8px #33aaff, 0 0 15px #33aaff; }
+      to { text-shadow: 0 0 20px #33aaff, 0 0 40px #33aaff, 0 0 60px #33aaff; }
+    }
+
+    nav { display: flex; }
+    nav a {
+      color: #ccefff; margin-left: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;
+    }
+    nav a:hover { color: #00ffff; text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff; }
+    
+    .menu-toggle { display: none; font-size: 26px; color: #00e0ff; cursor: pointer; }
+    
+    .hero {
+      height: 60vh;
+      background: url('./img/home.jpg') no-repeat center/cover;
+      display: flex; justify-content: center; align-items: center; text-align: center; color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6); padding: 0 20px;
+    }
+    .hero div { animation: slideUp 2s ease forwards; opacity: 0; }
+    .hero h2 { font-size: 30px; margin-bottom: 15px; color: #00d9ff; }
+    .hero p { font-size: 16px; max-width: 700px; margin: auto; color: #e0f7ff; }
+    
+    .image-banner {
+      width: 100%; height: 120px;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8fcd5c99b2?auto=format&fit=crop&w=1200&q=60') no-repeat center/cover;
+      margin: 30px 0; animation: fadeIn 2s ease;
+    }
+    
+    .section {
+      padding: 40px 50px; border-bottom: 1px solid #1a1a3d;
+      opacity: 0; transform: translateY(30px); transition: all 1s ease;
+    }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section h3 { font-size: 26px; margin-bottom: 20px; color: #89f0ff; }
+    .section p, .section ul { max-width: 900px; line-height: 1.7; font-size: 15px; color: #c2c9ff; }
+    .section ul li { margin-bottom: 10px; }
+    .section ul li i { color: #00e0ff; margin-right: 10px; }
+    
+    footer {
+      text-align: center; padding: 30px; background: #1c1c1c;
+      color: #cccccc; font-size: 14px;
+    }
+    footer .socials a { margin: 0 10px; color: #00e0ff; font-size: 18px; transition: 0.3s; }
+    footer .socials a:hover { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+    
+    html { scroll-behavior: smooth; }
+    
+    /* Animations */
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; flex-direction: column; background: #000428; position: absolute; top: 70px; right: 0; width: 200px; padding: 20px; }
+      nav.active { display: flex; }
+      nav a { margin: 15px 0; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.jpg" alt="Trubexa Logo" class="logo glow-logo">
+        <h1 class="glow-text">Trubexa</h1>
+      </a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="vision.html">Vision</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h2>AI-Powered BPO for the Digital Age</h2>
+      <p>Revolutionizing outsourcing with automation, precision, and customer-centric solutions — welcome to the future of business process services.</p>
+    </div>
+  </section>
+
+  <div class="image-banner"></div>
+
+  <section class="section" id="services">
+    <h3>Our Core Services</h3>
+    <ul>
+      <li><i class="fas fa-headset"></i>24/7 Multilingual Customer Support</li>
+      <li><i class="fas fa-robot"></i>AI-Powered Chatbots & Virtual Assistants</li>
+      <li><i class="fas fa-cogs"></i>Robotic Process Automation (RPA)</li>
+      <li><i class="fas fa-database"></i>CRM & Lead Management</li>
+      <li><i class="fas fa-briefcase"></i>Back Office, Technical & KPO Support</li>
+    </ul>
+  </section>
+
+  <section class="section" id="why">
+    <h3>Why Trubexa?</h3>
+    <p>
+      Trubexa is not just another BPO — we are a next-gen automation-first solution provider. From sales to customer success, our team ensures smooth and fast business processes. Our trained agents, integrated dashboards, and robotic workflows improve efficiency while reducing turnaround time.
+    </p>
+  </section>
+
+  <section class="section" id="industries">
+    <h3>Industries We Serve</h3>
+    <p>
+      Our services cater to BFSI, Insurance, E-Commerce, EdTech, Logistics, and Real Estate. With dedicated teams for each industry, we tailor processes to meet sector-specific KPIs, compliance, and service expectations.
+    </p>
+  </section>
+
+  <section class="section" id="vision">
+    <h3>Our Vision</h3>
+    <p>
+      To become India’s most trusted and tech-driven BPO partner, enabling startups and enterprises to scale seamlessly through intelligent operations and personalized support.
+    </p>
+  </section>
+
+  <section class="section" id="team">
+    <h3>Founder’s Journey</h3>
+    <p>
+      Trubexa was founded by Ajay Yadav, who started the company with a mobile-based remote team, focusing on performance-driven credit card and insurance product sales. From humble beginnings, the company has evolved into a futuristic BPO partner, embracing automation, cloud dashboards, and customer-centric delivery models.
+    </p>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Client Testimonials</h3>
+    <p>🌟 “Trubexa reduced our ticket resolution time by 60% and transformed customer satisfaction across 5 countries.” – VP, FinTech Company</p>
+    <p>🌟 “Thanks to Trubexa’s chatbot and AI voice assistant, we automated 40% of support calls without losing the human touch.” – Head of Operations, E-Commerce Brand</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trubexa BPO Solutions. Powered by Innovation. All rights reserved.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Section scroll animation
+    const sections = document.querySelectorAll('.section');
+    const revealOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
