@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Trubexa</title>
+
+  <!-- Meta -->
+  <meta name="description" content="Contact Trubexa - AI-powered BPO solutions for customer support, automation, and business growth.">
+  <meta property="og:title" content="Contact - Trubexa">
+  <meta property="og:description" content="Get in touch with Trubexa BPO Solutions.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body { background: #0a0a23; color: #e0e0f0; overflow-x: hidden; }
+
+    /* Header (same as index) */
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      padding: 20px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+    .logo-container { display: flex; align-items: center; }
+    .logo-link { display: flex; align-items: center; text-decoration: none; }
+    .glow-logo {
+      height: 40px; filter: drop-shadow(0 0 8px #33aaff) drop-shadow(0 0 16px #33aaff);
+      transition: 0.3s;
+    }
+    .glow-logo:hover { filter: drop-shadow(0 0 12px #33aaff) drop-shadow(0 0 24px #33aaff); }
+    .glow-text {
+      font-size: 26px; color: #33aaff; text-transform: uppercase;
+      animation: glowText 1.5s infinite alternate; margin-left: 10px; white-space: nowrap;
+    }
+    @keyframes glowText {
+      from { text-shadow: 0 0 8px #33aaff, 0 0 15px #33aaff; }
+      to   { text-shadow: 0 0 20px #33aaff, 0 0 40px #33aaff; }
+    }
+    nav { display: flex; }
+    nav a {
+      color: #ccefff; margin-left: 25px; text-decoration: none; font-weight: bold; transition: 0.3s;
+    }
+    nav a:hover { color: #00ffff; text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff; }
+    .menu-toggle { display: none; font-size: 26px; color: #00e0ff; cursor: pointer; }
+
+    /* Hero */
+    .hero {
+      height: 40vh; background: url('./img/contact.jpg') no-repeat center/cover;
+      display: flex; justify-content: center; align-items: center;
+      text-align: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      padding: 0 20px;
+    }
+    .hero h2 { font-size: 36px; color: #00d9ff; animation: slideUp 2s ease forwards; opacity: 0; }
+
+    /* Sections */
+    .section {
+      padding: 40px 50px; border-bottom: 1px solid #1a1a3d;
+      opacity: 0; transform: translateY(30px); transition: all 1s ease;
+    }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section h3 { font-size: 26px; margin-bottom: 20px; color: #89f0ff; }
+    .section p { font-size: 15px; line-height: 1.7; color: #c2c9ff; }
+    .map { margin-top: 20px; }
+
+    /* Contact Form */
+    .contact-form {
+      background: rgba(0, 20, 40, 0.8);
+      padding: 25px; border-radius: 12px;
+      box-shadow: 0 0 15px #00e0ff44, 0 0 30px #00e0ff22;
+      margin-top: 30px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px; margin-bottom: 15px;
+      border: none; border-radius: 8px; font-size: 15px;
+      background: #101030; color: #fff;
+    }
+    .contact-form button {
+      background: #00e0ff; color: #000; border: none;
+      padding: 12px 20px; border-radius: 8px;
+      font-weight: bold; cursor: pointer; transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #00ffff; box-shadow: 0 0 12px #00ffff;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: linear-gradient(135deg, #001f3f, #003f7f);
+      margin: 40px auto; padding: 35px; border-radius: 14px;
+      text-align: center; max-width: 700px;
+      box-shadow: 0 0 20px #00e0ff55, 0 0 40px #00e0ff33;
+      animation: pulse 2s infinite alternate;
+    }
+    .cta-box h3 { font-size: 24px; color: #00ffff; margin-bottom: 15px; }
+    .cta-box p { font-size: 15px; color: #cceeff; margin-bottom: 20px; }
+    .cta-box a {
+      display: inline-block; margin: 10px; padding: 12px 20px;
+      background: #00e0ff; color: #000; text-decoration: none;
+      border-radius: 8px; font-weight: bold; transition: 0.3s;
+    }
+    .cta-box a:hover { background: #00ffff; box-shadow: 0 0 12px #00ffff; }
+    @keyframes pulse {
+      from { box-shadow: 0 0 15px #00e0ff44; }
+      to   { box-shadow: 0 0 35px #00e0ff88; }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center; padding: 30px; background: #1c1c1c;
+      color: #cccccc; font-size: 14px;
+    }
+    footer .socials a { margin: 0 10px; color: #00e0ff; font-size: 18px; transition: 0.3s; }
+    footer .socials a:hover { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+
+    /* WhatsApp Floating */
+    .whatsapp-float {
+      position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
+      background: #25D366; color: #fff; border-radius: 50%;
+      display: flex; justify-content: center; align-items: center;
+      font-size: 28px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      z-index: 1000; transition: 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* Animations */
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; flex-direction: column; background: #000428; position: absolute; top: 70px; right: 0; width: 200px; padding: 20px; }
+      nav.active { display: flex; }
+      nav a { margin: 15px 0; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.jpg" alt="Trubexa Logo" class="glow-logo">
+        <h1 class="glow-text">Trubexa</h1>
+      </a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="vision.html">Vision</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2></h2>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <h3>Contact Information</h3>
+    <p><strong>Office Address:</strong><br>
+       Office No. 14, Chitrakut, Tembipada Road,<br>
+       Bhandup West, Mumbai - 400078</p><br>
+    <p><strong>Phone:</strong> +91 9082875245</p>
+    <p><strong>Email:</strong> info@trubexa.com</p>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.365817214241!2d72.93424577500052!3d19.1565126820684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8a82b2bb6a9%3A0x7a7e6e4f0e13c8a9!2sBhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078!5e0!3m2!1sen!2sin!4v1701000000000!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form onsubmit="sendWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="cta-box">
+    <h3>🚀 Let's Transform Your Business Together!</h3>
+    <p>Future-ready BPO solutions with AI & Innovation – Connect today and take the leap.</p>
+    <a href="mailto:info@trubexa.com">Email Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Trubexa BPO Solutions. Powered by Innovation. All rights reserved.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/919082875245?text=Hello%20Trubexa%20Team%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+     class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    // Section scroll animation
+    const sections = document.querySelectorAll('.section');
+    const revealOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) sec.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // WhatsApp Form Send
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const url = `https://wa.me/919082875245?text=Hi%20Trubexa%2C%0AName%3A%20${encodeURIComponent(name)}%0AEmail%3A%20${encodeURIComponent(email)}%0AMessage%3A%20${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
