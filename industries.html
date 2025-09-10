@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trubexa BPO Solutions</title>
+  <meta name="description" content="Trubexa - AI-powered BPO solutions for customer support, automation, and business growth.">
+  <meta property="og:title" content="Trubexa BPO Solutions">
+  <meta property="og:description" content="AI-Powered BPO for the Digital Age. Revolutionizing outsourcing with automation and customer-centric solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body { background: #0a0a23; color: #e0e0f0; overflow-x: hidden; }
+    
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Brighter glowing Trubexa text */
+    .logo-link h1.glow-text {
+      font-size: 26px;
+      color: #33aaff; /* brighter version of #0073c2 */
+      text-transform: uppercase;
+      animation: glowText 1.5s infinite alternate;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* Stronger glow for logo */
+    .glow-logo {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 8px #33aaff) drop-shadow(0 0 16px #33aaff) drop-shadow(0 0 24px #33aaff);
+      transition: 0.3s ease-in-out;
+    }
+
+    .glow-logo:hover {
+      filter: drop-shadow(0 0 12px #33aaff) drop-shadow(0 0 24px #33aaff) drop-shadow(0 0 36px #33aaff);
+    }
+
+    /* Stronger keyframes for glowing text */
+    @keyframes glowText {
+      from { text-shadow: 0 0 8px #33aaff, 0 0 15px #33aaff; }
+      to { text-shadow: 0 0 20px #33aaff, 0 0 40px #33aaff, 0 0 60px #33aaff; }
+    }
+
+    nav { display: flex; }
+    nav a {
+      color: #ccefff; margin-left: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;
+    }
+    nav a:hover { color: #00ffff; text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff; }
+    
+    .menu-toggle { display: none; font-size: 26px; color: #00e0ff; cursor: pointer; }
+    
+
+    .hero { height: 45vh; background: radial-gradient(circle at top, #001537, #000610); display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; }
+    .hero h2 { font-size: 32px; color: #00d9ff; animation: slideUp 1.2s ease forwards; opacity: 0; }
+    .hero p { margin-top: 10px; font-size: 16px; color: #e0f7ff; max-width: 700px; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url('./img/blue.jpg') center/cover no-repeat; filter: brightness(0.6); z-index: 0; }
+    .hero > * { position: relative; z-index: 1; }
+
+    .industries { padding: 50px; }
+    .industries h3 { font-size: 26px; color: #89f0ff; text-align: center; margin-bottom: 30px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 25px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.35); transition: transform .3s ease; }
+    .card:hover { transform: translateY(-8px); }
+
+    .icon { width: 80px; height: 80px; margin: 0 auto 15px; }
+    .card h4 { font-size: 20px; color: var(--accent); margin-bottom: 10px; }
+    .card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    footer { text-align: center; padding: 24px; background: #1c1c1c; color: #cccccc; font-size: 14px; margin-top: 40px; }
+
+    @keyframes glow { from { text-shadow: 0 0 5px var(--accent); } to { text-shadow: 0 0 20px var(--accent2), 0 0 30px var(--accent); } }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { 
+        display: none; 
+        flex-direction: column; 
+        background: #000428; 
+        position: absolute; 
+        top: 70px; right: 0; 
+        width: 200px; 
+        padding: 20px; 
+      }
+      nav.active { display: flex; }
+      nav a { margin: 15px 0; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="./img/logo.jpg" alt="Trubexa Logo" class="logo glow-logo">
+        <h1 class="glow-text">Trubexa</h1>
+      </a>
+    </div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="vision.html">Vision</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Industries We Serve</h2>
+      <p>Delivering industry-specific BPO solutions with precision, compliance, and a futuristic edge.</p>
+    </div>
+  </section>
+
+  <section class="industries">
+    <h3>Our Expertise Across Sectors</h3>
+    <div class="grid">
+      <!-- Banking & Finance -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#012f6b"/><path d="M20 40h24M20 32h24M20 24h24" stroke="#19ccff" stroke-width="2"/></svg>
+        </div>
+        <h4>Banking & Finance</h4>
+        <p>Secure, compliant BPO solutions tailored for financial institutions and fintech firms.</p>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><rect x="22" y="14" width="20" height="36" fill="#012f6b"/><rect x="30" y="24" width="4" height="16" fill="#19ccff"/></svg>
+        </div>
+        <h4>Healthcare</h4>
+        <p>Accurate, private, and empathetic support services for clinics, hospitals, and healthcare providers.</p>
+      </div>
+
+      <!-- E-commerce -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><path d="M16 20h32l-4 24H20z" fill="#012f6b"/><circle cx="28" cy="48" r="4" fill="#19ccff"/><circle cx="44" cy="48" r="4" fill="#19ccff"/></svg>
+        </div>
+        <h4>E-commerce & Retail</h4>
+        <p>End-to-end support—order processing, customer service, and inventory tracking.</p>
+      </div>
+
+      <!-- Telecom -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><path d="M32 14v36M20 26h24M20 38h24" stroke="#19ccff" stroke-width="2"/></svg>
+        </div>
+        <h4>Telecom</h4>
+        <p>24/7 customer and technical support ensuring uninterrupted service delivery.</p>
+      </div>
+
+      <!-- Technology -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="#012f6b"/><rect x="30" y="20" width="4" height="24" fill="#19ccff"/></svg>
+        </div>
+        <h4>Technology</h4>
+        <p>Scalable BPO support for SaaS, IT, and growth-driven tech enterprises.</p>
+      </div>
+
+      <!-- Travel & Hospitality -->
+      <div class="card">
+        <div class="icon">
+          <svg viewBox="0 0 64 64"><path d="M18 40l12-16 12 16" stroke="#19ccff" stroke-width="2" fill="#012f6b"/><rect x="26" y="44" width="12" height="6" fill="#012f6b"/></svg>
+        </div>
+        <h4>Travel & Hospitality</h4>
+        <p>Booking support, multilingual assistance, and guest relations for global travel brands.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Trubexa BPO Solutions. Powered by Innovation.
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
